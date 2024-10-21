@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="author" content="Olivia Woods">
+    <link rel="stylesheet" href="pftStyle.css"> 
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Personal Finance Tracker</h1>
+        </div>
+    </header>
+    
+    <!-- Main Body -->
+    <main>
+        <div class="container">
+            <!-- Transaction Form Section -->
+            <section>
+                <form id="transaction-form">
+                    <!-- Date -->
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" required>
+                    
+                    <!-- Type -->
+                    <label for="type">Type:</label>
+                    <select id="type" required>
+                        <option value="Expense">Expense</option>
+                        <option value="Income">Income</option>
+                    </select>
+                    
+                    <!-- Category -->
+                    <label for="category">Category:</label>
+                    <select id="category" required>
+                        <option value="Education">Education</option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Fashion">Fashion</option>
+                        <option value="Food">Food</option>
+                        <option value="Payment">Payment</option>
+                        <option value="Pilates">Pilates</option>
+                        <option value="Rent">Rent</option>
+                        <option value="Salary">Salary</option>
+                    </select>
+                    
+                    <!-- Amount -->
+                    <label for="amount">Amount (AUD):</label>
+                    <input type="number" id="amount" name="amount" placeholder="0.00" step="0.01" oninput="formatCurrency(this)" required>
+                    
+                    <!-- Notes -->
+                    <label for="notes">Notes:</label>
+                    <textarea id="notes" rows="3" cols="30"></textarea> <!-- Set default rows and cols -->
+                    
+                    <!-- Submit Button -->
+                    <button type="submit">Add Transaction</button>
+                </form>
+            </section>
+
+            <!-- Balances and Converter Section -->
+            <div class="balances-converter">
+                <!-- Currency Converter Section -->
+                <div class="exchange-rate-section">
+                    <h3>Currency Converter</h3>
+                    <label for="amount-to-convert">Enter Amount in AUD:</label>
+                    <input type="number" id="amount-to-convert" placeholder="0.00" min="0" step="0.01" oninput="formatCurrency(this)">
+                    <p>Current Exchange Rate (AUD to USD): <span id="exchange-rate">Loading...</span></p>
+                    <p>Converted Amount: <span id="converted-amount">$0.00</span></p>
+                </div>
+                
+                <!-- Balance Section -->
+                <div class="balances">
+                    <h3>Balance</h3>
+                    <p>Starting Balance: <span id="starting-balance">$0.00</span></p>
+                    <p>Closing Balance: <span style="color: #FF4433;" id="closing-balance">$0.00</span></p>
+                </div>
+            </div>
+
+            <!-- Filter Section -->
+            <section id="filter-section">
+                <label for="filter-category">Category:</label>
+                <select id="filter-category">
+                    <option value="">All</option>
+                    <option value="Education">Education</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Fashion">Fashion</option>
+                    <option value="Food">Food</option>
+                    <option value="Payment">Payment</option>
+                    <option value="Pilates">Pilates</option>
+                    <option value="Rent">Rent</option>
+                    <option value="Salary">Salary</option>
+                </select>
+                
+                <label for="filter-type">Type:</label>
+                <select id="filter-type">
+                    <option value="">All</option>
+                    <option value="Expense">Expense</option>
+                    <option value="Income">Income</option>
+                </select>
+
+                <label for="filter-start-date">Start Date:</label>
+                <input type="date" id="filter-start-date">
+
+                <label for="filter-end-date">End Date:</label>
+                <input type="date" id="filter-end-date">
+
+                <button id="apply-filters">Apply Filters</button>
+            </section>
+
+            <!-- Transaction Table -->
+            <section>
+                <table id="transaction-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Type</th>
+                            <th>Category</th>
+                            <th>Amount</th>
+                            <th>Notes</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Transaction Results Added Here -->
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+    
+    <!-- Link to JavaScript File -->
+    <script src="pftJS.js"></script>
+</body>
+</html>
