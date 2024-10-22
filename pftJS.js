@@ -136,12 +136,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         displayTransactions(filteredTransactions);
+        applyFiltersButton.innerText = 'Clear Filters'; // Change button text
+    };
+
+    // Function to Clear Filters
+    const clearFilters = () => {
+        // Reset all filter inputs
+        filterCategory.value = '';
+        filterType.value = '';
+        filterStartDate.value = '';
+        filterEndDate.value = '';
+
+        // Display all transactions
+        displayTransactions(transactions);
+        applyFiltersButton.innerText = 'Apply Filters'; // Change button text back
     };
 
     // Attach Event Listeners
     transactionForm.addEventListener('submit', addTransaction);
     amountToConvertInput.addEventListener('input', convertAmount);
-    applyFiltersButton.addEventListener('click', filterTransactions);
+    applyFiltersButton.addEventListener('click', () => {
+        if (applyFiltersButton.innerText === 'Apply Filters') {
+            filterTransactions();
+        } else {
+            clearFilters();
+        }
+    });
 
     // Initial Display of Transactions
     displayTransactions();
