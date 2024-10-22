@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,17 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta name="author" content="Olivia Woods">
-    <link rel="stylesheet" href="pftStyle.css"> 
+    <link rel="stylesheet" href="pftStyle.css">
 </head>
+
 <body>
     <!-- Header -->
     <header>
-        <div class="container">
+        <nav>
             <h1>Personal Finance Tracker</h1>
-        </div>
+        </nav>
     </header>
-    
+
     <!-- Main Body -->
     <main>
         <div class="container">
@@ -26,14 +28,14 @@
                     <!-- Date -->
                     <label for="date">Date:</label>
                     <input type="date" id="date" required>
-                    
+
                     <!-- Type -->
                     <label for="type">Type:</label>
                     <select id="type" required>
                         <option value="Expense">Expense</option>
                         <option value="Income">Income</option>
                     </select>
-                    
+
                     <!-- Category -->
                     <label for="category">Category:</label>
                     <select id="category" required>
@@ -46,15 +48,15 @@
                         <option value="Rent">Rent</option>
                         <option value="Salary">Salary</option>
                     </select>
-                    
+
                     <!-- Amount -->
                     <label for="amount">Amount (AUD):</label>
                     <input type="number" id="amount" name="amount" placeholder="0.00" step="0.01" oninput="formatCurrency(this)" required>
-                    
+
                     <!-- Notes -->
                     <label for="notes">Notes:</label>
                     <textarea id="notes" rows="3" cols="30"></textarea> <!-- Set default rows and cols -->
-                    
+
                     <!-- Submit Button -->
                     <button type="submit" class="add-transaction-btn">Add Transaction</button>
                 </form>
@@ -70,7 +72,7 @@
                     <p>Current Exchange Rate (AUD to USD): <span id="exchange-rate">Loading...</span></p>
                     <p>Converted Amount: <span style="color: #54e874;" id="converted-amount">$0.00</span></p>
                 </div>
-                
+
                 <!-- Balance Section -->
                 <div class="balances">
                     <h3>Balance</h3>
@@ -93,7 +95,7 @@
                     <option value="Rent">Rent</option>
                     <option value="Salary">Salary</option>
                 </select>
-                
+
                 <label for="filter-type">Type:</label>
                 <select id="filter-type">
                     <option value="">All</option>
@@ -130,8 +132,13 @@
             </section>
         </div>
     </main>
-    
+
+    <footer>
+        <p>&copy; 2024 Olivia Woods. All Rights Reserved.</p>
+    </footer>
+
     <!-- Link to JavaScript File -->
     <script src="pftJS.js"></script>
 </body>
+
 </html>

@@ -1,5 +1,4 @@
-/* StyleSheet */
-:root { 
+:root {
     --primary-color: #FF93D5; /* Light Pink */
     --hover-color: #FF66C4; /* Dark Pink */
     --delete-color: #54e874; 
@@ -13,14 +12,28 @@ body {
     color: #333;
     margin: 0;
     padding: 20px;
+    padding-top: 80px; /* Adjusted for fixed header space */
 }
 
-/* Header */
-h1 {
-    text-align: center;
-    font-size: 38px;
-    color: var(--hover-color);
-    margin-bottom: 8px; 
+/* Header Styles */
+header {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 4px 6px #FF93D5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centering title */
+    padding: 10px 20px;
+    box-sizing: border-box; 
+}
+
+header h1 {
+    margin: 0; /* Removed margin for spacing */
+    font-size: 1.8rem; 
 }
 
 /* Container */
@@ -28,26 +41,6 @@ h1 {
     max-width: 800px;
     margin: auto;
     padding: 10px;
-}
-
-/* Navigation */
-nav {
-    background-color: var(--primary-color);
-    padding: 10px;
-    text-align: center;
-    border-radius: 20px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    padding: 5px 10px;
-}
-
-nav a:hover {
-    background: var(--hover-color);
-    border-radius: 6px;
 }
 
 /* Form Styles */
@@ -100,10 +93,9 @@ button:hover {
     background-color: var(--hover-color);
 }
 
-    /* Custom Cursor for Add Transaction Button */
-    .add-transaction-btn {
-        cursor: url('money.ico'), auto;
-    }
+.add-transaction-btn {
+    cursor: url('money.ico'), auto;
+}
 
 /* Delete Button */
 .delete-btn {
@@ -131,6 +123,10 @@ th, td {
 th {
     background-color: var(--primary-color);
     color: white; 
+}
+
+td {
+    background-color: #fff;
 }
 
 /* Center Action Column */
@@ -191,6 +187,17 @@ th {
 #apply-filters {
     padding: 5px 10px; 
     cursor: pointer; 
+}
+
+/* Footer Styling */
+footer {
+    padding: 6px; 
+    background: #333; 
+    color: #fff; 
+    text-align: center; 
+    position: relative; 
+    bottom: 0;
+    width: 100%; 
 }
 
 /* Responsive Design */
