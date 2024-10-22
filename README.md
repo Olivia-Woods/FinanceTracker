@@ -17,3 +17,9 @@ The **Personal Finance Tracker** is a web application designed to help users man
 - **HTML5**: Structure of the web application (via `PFT.html`).
 - **CSS**: Styling and layout (via `pftStyle.css`).
 - **JavaScript**: Functionality for transaction handling and currency conversion (via `pftJS.js`).
+
+## Styling
+
+- **Flexbox and Grid Layouts** 
+- **Box Shadow for Depth**
+- **Media Queries for Responsive Adjustments**
