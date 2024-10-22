@@ -2,7 +2,7 @@
 :root { 
     --primary-color: #FF93D5; /* Light Pink */
     --hover-color: #FF66C4; /* Dark Pink */
-    --delete-color: #FF6F61; 
+    --delete-color: #54e874; 
     --delete-hover: #FF4433; 
 }
 
@@ -99,6 +99,11 @@ button {
 button:hover {
     background-color: var(--hover-color);
 }
+
+    /* Custom Cursor for Add Transaction Button */
+    .add-transaction-btn {
+        cursor: url('money.ico'), auto;
+    }
 
 /* Delete Button */
 .delete-btn {
