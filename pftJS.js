@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const closingBalance = transactions.reduce((total, { type, amount }) => {
             return type === 'Income' ? total + amount : total - amount;
         }, 0);
-        startingBalanceDisplay.innerText = `$0.00`; // Adjust if needed
+        startingBalanceDisplay.innerText = `$0.00`; // Can Adjust
         closingBalanceDisplay.innerText = `$${closingBalance.toFixed(2)}`;
     };
 
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const fetchExchangeRate = async () => {
         return new Promise(resolve => {
             setTimeout(() => {
-                const rate = 0.65; // Simulated rate: 1 AUD = 0.65 USD
+                const rate = 0.65; // Simulated Rate: 1 AUD = 0.65 USD
                 resolve(rate);
             }, 1000);
         });
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         displayTransactions(filteredTransactions);
-        applyFiltersButton.innerText = 'Clear Filters'; // Change button text
+        applyFiltersButton.innerText = 'Clear Filters'; 
     };
 
     // Function to Clear Filters
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Display all transactions
         displayTransactions(transactions);
-        applyFiltersButton.innerText = 'Apply Filters'; // Change button text back
+        applyFiltersButton.innerText = 'Apply Filters'; 
     };
 
     // Attach Event Listeners
