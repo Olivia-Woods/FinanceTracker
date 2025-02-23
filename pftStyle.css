@@ -1,228 +1,247 @@
 :root {
-    --primary-color: #FF93D5; /* Light Pink */
-    --hover-color: #FF66C4; /* Dark Pink */
-    --delete-color: #54e874; 
-    --delete-hover: #FF4433; 
+  --primary-color: #ff93d5;
+  --hover-color: #ff66c4;
+  --delete-color: #54e874;
+  --delete-hover: #ff4433;
 }
 
 /* Body Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    margin: 0;
-    padding: 20px;
-    padding-top: 80px; /* Adjusted for fixed header space */
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  padding-top: 140px;
+  background-image: url("./f.png");
+  background-size: 50% auto;
+  background-position: left;
+  background-attachment: fixed;
+  background-repeat: repeat;
 }
 
 /* Header Styles */
 header {
-    width: 100%;
-    background: #fff;
-    box-shadow: 0 4px 6px #FF93D5;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Centering title */
-    padding: 10px 20px;
-    box-sizing: border-box; 
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 4px 6px #ff93d5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  flex-direction: column;
+  text-align: center;
+}
+
+.header-image {
+  width: 50%;
+  max-height: 100px;
+  object-fit: cover;
 }
 
 header h1 {
-    margin: 0; /* Removed margin for spacing */
-    font-size: 1.8rem; 
+  margin: 0;
+  font-size: 1.8rem;
+  color: #333;
 }
 
 /* Container */
 .container {
-    max-width: 800px;
-    margin: auto;
-    padding: 10px;
+  max-width: 800px;
+  margin: auto;
+  padding: 10px;
 }
 
 /* Form Styles */
 form {
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: #fff; 
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 15px rgba(255, 102, 196, 0.2); 
-    display: grid; 
-    grid-template-columns: 1fr 2fr; 
-    gap: 15px; 
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(255, 102, 196, 0.2);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 15px;
 }
 
 label {
-    font-weight: bold;
-    margin-bottom: 5px;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
-input, select, textarea {
-    padding: 6px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+input,
+select,
+textarea {
+  padding: 6px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
 input[type="date"],
 input[type="number"],
 textarea {
-    height: 28px; 
+  height: 28px;
 }
 
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 /* Button Styles */
 button {
-    background-color: var(--primary-color);
-    color: white;
-    font-size: medium;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    grid-column: span 2; 
+  background-color: var(--primary-color);
+  color: white;
+  font-size: medium;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  grid-column: span 2;
 }
 
 button:hover {
-    background-color: var(--hover-color);
+  background-color: var(--hover-color);
 }
 
 .add-transaction-btn {
-    cursor: url('money.ico'), auto;
+  cursor: url("money.ico"), auto;
 }
 
 /* Delete Button */
 .delete-btn {
-    background-color: var(--delete-color);
-    color: white;
+  background-color: var(--delete-color);
+  color: white;
 }
 
 .delete-btn:hover {
-    background-color: var(--delete-hover);
+  background-color: var(--delete-hover);
 }
 
 /* Table Styles */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
-th, td {
-    padding: 10px;
-    text-align: left;
-    border: 1px solid #ddd;
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
 }
 
 th {
-    background-color: var(--primary-color);
-    color: white; 
+  background-color: var(--primary-color);
+  color: white;
 }
 
 td {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 /* Center Action Column */
 #transaction-table td:last-child,
 #transaction-table th:last-child {
-    text-align: center;
+  text-align: center;
 }
 
 /* Balances and Currency Converter */
 .balances-converter {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
-.balances, .exchange-rate-section {
-    flex: 1;
-    padding: 20px;
-    background-color: #fff; 
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(255, 102, 196, 0.2); 
+.balances,
+.exchange-rate-section {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(255, 102, 196, 0.2);
 }
 
 .balances {
-    text-align: center;
-    margin-left: 10px; 
+  text-align: center;
+  margin-left: 10px;
 }
 
 .exchange-rate-section {
-    margin-right: 10px; 
+  margin-right: 10px;
 }
 
 .exchange-rate-section input {
-    width: calc(100% - 22px); 
+  width: calc(100% - 22px);
 }
 
 /* Filter Section Styling */
 #filter-section {
-    display: flex; 
-    align-items: center; 
-    margin: 20px 0; 
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
 }
 
 #filter-section label {
-    margin-right: 10px; 
+  margin-right: 10px;
 }
 
 #filter-section select,
 #filter-section input {
-    margin-right: 20px; 
-    padding: 5px; 
+  margin-right: 20px;
+  padding: 5px;
 }
 
 #filter-section input[type="date"] {
-    width: 100px;
+  width: 100px;
 }
 
 #apply-filters {
-    padding: 5px 10px; 
-    cursor: pointer; 
+  padding: 5px 10px;
+  cursor: pointer;
 }
 
 /* Footer Styling */
 footer {
-    padding: 6px; 
-    background: #333; 
-    color: #fff; 
-    text-align: center; 
-    position: relative; 
-    bottom: 0;
-    width: 100%; 
+  padding: 6px;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .container {
-        width: 100%;
-    }
+  .container {
+    width: 100%;
+  }
 
-    form {
-        max-width: 100%;
-        grid-template-columns: 1fr; 
-    }
+  form {
+    max-width: 100%;
+    grid-template-columns: 1fr;
+  }
 
-    .balances-converter {
-        flex-direction: column; 
-    }
+  .balances-converter {
+    flex-direction: column;
+  }
 
-    .balances, .exchange-rate-section {
-        margin-right: 0; 
-        margin-bottom: 10px; 
-        width: 100%; 
-        margin-left: 0; 
-    }
+  .balances,
+  .exchange-rate-section {
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 100%;
+    margin-left: 0;
+  }
 
-    #filter-section {
-        display: none; 
-    }
+  #filter-section {
+    display: none;
+  }
 }
