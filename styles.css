@@ -32,21 +32,15 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 10px;
+  padding: 28px 28px;
   box-sizing: border-box;
   flex-direction: column;
   text-align: center;
 }
 
-.header-image {
-  width: 50%;
-  max-height: 100px;
-  object-fit: cover;
-}
-
 header h1 {
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   color: #333;
 }
 
@@ -207,17 +201,6 @@ td {
   cursor: pointer;
 }
 
-/* Footer Styling */
-footer {
-  padding: 6px;
-  background: #333;
-  color: #fff;
-  text-align: center;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .container {
@@ -247,11 +230,11 @@ footer {
 }
 
 @keyframes moveBackground {
-  0% {
+  from {
     background-position: 0 0;
   }
-  100% {
-    background-position: 100% 100%;
+  to {
+    background-position: 200% 200%;
   }
 }
 
