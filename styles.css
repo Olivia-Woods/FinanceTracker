@@ -1,3 +1,4 @@
+/* Global Variables */
 :root {
   --primary-color: #ff93d5;
   --hover-color: #ff66c4;
@@ -5,26 +6,27 @@
   --delete-hover: #ff4433;
 }
 
-/* Body Styling */
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   color: #333;
   margin: 0;
   padding: 20px;
-  padding-top: 140px;
-  background-image: url("./f.png");
+  padding-top: 120px;
+  /* background-image: url("./f.png");  *** Optional Animation Background Image */
   background-size: 50% auto;
   background-position: left;
   background-attachment: fixed;
   background-repeat: repeat;
+  animation: moveBackground 8s linear infinite;
 }
 
 /* Header Styles */
 header {
   width: 100%;
   background: #fff;
-  box-shadow: 0 4px 6px #ff93d5;
+  box-shadow: 0 4px 6px var(--primary-color);
   position: fixed;
   top: 0;
   left: 0;
@@ -32,7 +34,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 28px 28px;
+  padding: 28px;
   box-sizing: border-box;
   flex-direction: column;
   text-align: center;
@@ -40,11 +42,11 @@ header {
 
 header h1 {
   margin: 0;
-  font-size: 2.2rem;
+  font-size: 2rem;
   color: #333;
 }
 
-/* Container */
+/* Main Content Styling */
 .container {
   max-width: 800px;
   margin: auto;
@@ -58,7 +60,7 @@ form {
   background-color: #fff;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 4px 15px rgba(255, 102, 196, 0.2);
+  box-shadow: 0px 0px 4px 4px rgba(255, 102, 196, 0.1);
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 15px;
@@ -120,6 +122,7 @@ button:hover {
 /* Table Styles */
 table {
   width: 100%;
+  border-radius: 10px;
   border-collapse: collapse;
   margin-top: 20px;
 }
@@ -159,7 +162,7 @@ td {
   padding: 20px;
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(255, 102, 196, 0.2);
+  box-shadow: 0px 0px 4px 4px rgba(255, 102, 196, 0.1);
 }
 
 .balances {
@@ -201,6 +204,11 @@ td {
   cursor: pointer;
 }
 
+/* Footer Styles */
+footer {
+  text-align: center;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .container {
@@ -229,28 +237,12 @@ td {
   }
 }
 
-@keyframes moveBackground {
+/* Background Animation *** Optional Animation Background */
+/* @keyframes moveBackground {
   from {
     background-position: 0 0;
   }
   to {
     background-position: 200% 200%;
   }
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-  margin: 0;
-  padding: 20px;
-  padding-top: 140px;
-  background-image: url("./f.png");
-  background-size: 50% auto;
-  background-position: left;
-  background-attachment: fixed;
-  background-repeat: repeat;
-
-  /* Apply Animation */
-  animation: moveBackground 8s linear infinite;
-}
+} */
