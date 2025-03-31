@@ -1,4 +1,4 @@
-# 💕 Finance Tracker
+# Finance Tracker
 
 ## Overview
 
@@ -31,3 +31,8 @@ The **Finance Tracker** is a web application designed to help users manage their
    ```bash
    git clone https://github.com/yourusername/finance-tracker.git
    ```
+   
+## Contact
+
+👩🏽‍💻 **Developer:** Olivia Woods 2025 
+GitHub: [github.com/Olivia-Woods]
