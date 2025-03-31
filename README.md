@@ -34,5 +34,5 @@ The **Finance Tracker** is a web application designed to help users manage their
    
 ## Contact
 
-👩🏽‍💻 **Developer:** Olivia Woods 2025 
+👩🏽‍💻 **Developer:** Olivia Woods 2025<br>
 GitHub: [github.com/Olivia-Woods]
